@@ -3,6 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>RenderX</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="icon.png">
+
   <style>
     body {
       margin: 0;
@@ -21,12 +24,12 @@
     }
 
     h1 {
-      color: #00c6ff;
+      color: #26c6ea;
       margin: 10px 0;
     }
 
     h2 {
-      color: #00c6ff;
+      color: #26c6ea;
     }
 
     table {
@@ -59,11 +62,11 @@
     }
 
     .section h3 {
-      color: #00c6ff;
+      color: #26c6ea;
     }
 
     .highlight {
-      color: #ff3333;
+      color: #26c6ea;
       font-weight: bold;
     }
 
@@ -88,7 +91,7 @@
 <body>
   <header>
     <img src="logo.png" alt="RenderX Logo">
-    <h1>Catalogo & Estrategias de Vendas</h1>
+    <h1>Melhore suas imagens</h1>
     <p style="color:#cccccc">Transformando imagens em experiencias visuais impactantes</p>
   </header>
 
@@ -158,15 +161,26 @@
         datasets: [{
           label: 'Chances de Compra (%)',
           data: [100, 125],
-          backgroundColor: ['#ff6b6b', '#00c6ff']
+          backgroundColor: ['#999999', '#26c6ea'] // cinza + azul turquesa
         }]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            labels: {
+              color: '#000' // preto para contraste dentro do fundo branco
+            }
+          }
+        },
         scales: {
+          x: {
+            ticks: { color: '#000' }
+          },
           y: {
-            beginAtZero: true
+            beginAtZero: true,
+            ticks: { color: '#000' }
           }
         }
       }
@@ -174,4 +188,3 @@
   </script>
 </body>
 </html>
-
